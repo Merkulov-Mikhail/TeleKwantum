@@ -5,7 +5,7 @@ import sys
 
 
 BASIC_STDOUT = sys.stdout
-INFO_LOG_FILE = "asd.txt"
+INFO_LOG_FILE = "info.txt"
 LOGGER_FILE = "log.txt"
 ERROR_LOG_FILE = "errors.txt"
 
@@ -141,24 +141,3 @@ class dataBase:
 
     def print_info(self, login):
         return self.cursor.execute(f"SELECT * FROM users WHERE login='{login}'").fetchall()[0]
-
-
-a = dataBase()
-
-a.test_completion("1", "1", "50")
-
-a.add_user(login="example", psw="QWERTY", name="example", surname="example", middle_name="example")
-
-a.test_completion("example", "first_test", "50")
-a.update_score(login="example")
-print(a.print_info(login="example"))
-
-a.test_completion("example", "first_test", "100")
-a.update_score(login="example")
-print(a.print_info(login="example"))
-
-a.test_completion("example", "first_test", "60")
-print(a.print_info(login="example"))
-
-a.test_completion("example", "second_test", "70")
-print(a.print_info(login="example"))
