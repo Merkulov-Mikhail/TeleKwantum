@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <link rel="stylesheet" href="../static/styles/main.css">
+    </head>
+    <body>
+        <h1>Test_Placeholder</h1>
+        <form method="POST">
+            {% for number in range(questions|length) %}
+                <table>
+                    <tbody>
+                        <tr>
+                            <td colspan="2">{{ questions[number] }}</td>
+                        </tr>
+                        {% for count in range(answers[number].split(';')|length) %}
+                        <tr>
+                                <td>
+                                    <input type="radio" name={{number}} value={{count}}>
+                                </td>
+                                <td>
+                                    {{ answers[number].split(';')[count] }}
+                                </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            {% endfor %}
+            <div>
+                <input type="submit">
+            </div>
+        </form>
+    </body>
+</html>

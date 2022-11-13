@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+    <link rel="stylesheet" href="../static/styles/main.css">
+</head>
+    <body>
+        <h1>Здравствуй, {{ na }}</h1>
+        {% for video_id in range(videos|length) %}
+        <p><a href="/video/{{ video_id }}">{{ videos[video_id] }}</a></p>
+        {% endfor %}
+        {% for test_id in data.keys() %}
+            <p><a href="/test/{{ test_id }}">{{ data[test_id]["name"] }}</a></p>
+        {% endfor %}
+        <table>
+            {% for result in range(table|length) %}
+            <tr>
+                <td>{{ result + 1 }}</td>
+                <td>{{ table[result][0] }}</td>
+                <td>{{ table[result][1] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>

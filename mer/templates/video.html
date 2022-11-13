@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../static/styles/main.css">
+</head>
+<body>
+<div>
+    <a href="/main">Назад</a>
+</div>
+{% if video != "-1" %}
+    <video width="480" height="270" controls>
+        <source src="/static/videos/{{ video }}" type="video/mp4">
+    </video>
+{% endif %}
+</body>
+</html>

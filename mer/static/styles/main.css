@@ -1,0 +1,29 @@
+html {
+  background-image: url(../images/main_background.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover 10%;
+}
+table{
+    background-color: grey;
+}
+td{
+    background-color:  lightgrey;
+}
+th{
+    background-color: darkgrey;
+}
+video{
+    background-image: url(/static/images/video_background.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover 50%;
+}
