@@ -74,7 +74,7 @@ def test(test_id):
         res = TestResults(login=user_info.login, course=user_info.course, test_id=test_id, score=points)
         db.session.add(res)
     db.session.commit()
-    return render_main()
+    return redirect('/main')
 
 
 def render_main():

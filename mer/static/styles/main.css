@@ -3,9 +3,6 @@ html {
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover 10%;
 }
 table{
@@ -16,14 +13,4 @@ td{
 }
 th{
     background-color: darkgrey;
-}
-video{
-    background-image: url(/static/images/video_background.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover 50%;
 }
