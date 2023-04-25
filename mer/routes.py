@@ -1,4 +1,4 @@
-from flask import request, redirect, url_for, render_template, flash
+from flask import request, redirect, url_for, render_template, flash, jsonify
 from flask_login import login_user, login_required, logout_user, current_user
 from werkzeug.security import check_password_hash
 
@@ -140,3 +140,13 @@ def redirect_to_signin(response):
     if 401 == response.status_code:
         return redirect(url_for("login"))
     return response
+
+
+@login_required
+@app.route("/api/all_users", methods=["GET"])
+def users():
+    Dict = []
+    for user in Info.query.all():
+        id, surname, name = user.id, user.surname, user.name
+        Dict.append({"id": id, "surname": str(surname, encoding="utf-8"), "name": name})
+    return jsonify(Dict)

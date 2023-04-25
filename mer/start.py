@@ -1,1 +1,1 @@
-from mer import app
+from __init__ import app
